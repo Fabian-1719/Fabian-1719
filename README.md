@@ -21,11 +21,27 @@
 
 ### `> about`
 
-- 🎓 Computer Engineering student at **TEC** (Santa Clara, Costa Rica)
-- 🧩 Built a peer code-review platform on **microservices in Azure** with a team
-- 🔐 Currently going deeper into **cybersecurity**
-- 🏛️ Studying **software architecture & design** — hexagonal architecture, distributed systems, clean code
-- 🚀 Always exploring **new technologies** and turning them into side projects
+I'm a Computer Engineering student at the **Instituto Tecnológico de Costa Rica** who likes understanding systems end to end — from registers and memory in **x86 assembly** all the way up to **microservices in the cloud**. Most of what I build starts as a course project and turns into something I keep improving on my own.
+
+Lately I've been focused on **distributed systems**: a peer code-review platform made of three microservices on Azure, a game platform where a TypeScript server plays against you with a **Prolog AI** and streams every move to **Go and Scala** analytics services, and a price scraper that runs **80 concurrent workers** across processes, threads and async I/O.
+
+```ts
+const fabian = {
+  basedIn:   "Santa Clara, Costa Rica 🇨🇷",
+  studying:  "Computer Engineering @ TEC",
+  buildsWith: ["Python", "Java", "TypeScript", "Go", "React", "Spring Boot"],
+  enjoys:    ["distributed systems", "low-level programming", "game dev"],
+  learning:  ["cybersecurity", "software architecture", "system design"],
+  funFact:   "I've written games in Python, Java, TypeScript… and x86 Assembly 🎮",
+};
+```
+
+**What I'm focusing on right now**
+
+- 🔐 **Cybersecurity** — building strong fundamentals in networking and web security, and learning to think like an attacker to design safer software.
+- 🏛️ **Software architecture** — hexagonal architecture, event-driven communication and microservices, applied in real team projects rather than just diagrams.
+- ⚙️ **Engineering practices** — code reviews, Docker, CI/CD and writing documentation people actually read.
+- 🚀 **New technologies** — when something catches my attention, I build a small project with it to really learn it.
 
 ### `> stack`
 
