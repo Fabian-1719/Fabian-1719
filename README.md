@@ -26,7 +26,7 @@
 ### `> stack`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,js,go,scala,react,spring,fastapi,nodejs,flask&theme=dark&perline=10" alt="Languages and frameworks"/><br/>
+  <img src="https://skillicons.dev/icons?i=python,java,ts,js,go,scala,react,spring,fastapi,nodejs,flask&theme=dark&perline=11" alt="Languages and frameworks"/><br/>
   <img src="https://skillicons.dev/icons?i=azure,firebase,docker,redis,git,github,vite,html,css,powershell&theme=dark&perline=10" alt="Cloud and tools"/>
 </p>
 
@@ -37,7 +37,8 @@
 | [**RevisaTEC**](https://github.com/Crisaraya21/revisatec) | Peer code-review platform for university team projects: enforces reviewed PRs, measures each student's contribution and generates AI-assisted feedback. Three microservices behind Azure API Management with real-time notifications. | React · Spring Boot · FastAPI · Node.js · Azure |
 | [**NEXUS ARCA**](https://github.com/Fabian-1719/NEXUS-ARCA) | Video game price tracker that scrapes 20+ stores with a multi-core pipeline (processes + threads + async I/O, 80 concurrent workers) and a Flask REST API. [Live site ↗](https://arquinex.netlify.app/) | Python · Flask · Firebase · JS |
 | **Ciudad Pastel** <sub>🔒 private</sub> | Web platform for a pastry business that combines an online store and a baking academy (courses & enrollments). Monorepo with a React web app and a REST API documented with Swagger. Top contributor on the team. | React · Express · Firebase · Vitest |
-| [**GameStats**](https://github.com/Fabian-1719/GameStats) | Game-event analytics: a Go service ingests and validates match events, a Scala service computes player stats and detects patterns. | Go · Scala · Docker |
+| [**GameConsole**](https://github.com/Fabian-1719/GameConsole) | Multiplayer game console with an AI opponent written in Prolog (minimax + alpha-beta pruning). Real-time matches over WebSockets; every move is streamed to GameStats for analytics. | TypeScript · Fastify · Prolog · Docker |
+| [**GameStats**](https://github.com/Fabian-1719/GameStats) | The analytics side of GameConsole: a Go service ingests and validates match events, a Scala service computes player stats and detects patterns. | Go · Scala · Docker |
 
 ### `> stats`
 
