@@ -13,6 +13,10 @@
       <stop offset="0" stop-color="#ff7a3d" stop-opacity=".45"/>
       <stop offset="1" stop-color="#ff7a3d" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="swordGlow">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="shoot" x1="0" x2="1">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
@@ -32,6 +36,17 @@
       .fade { opacity: 0; animation: in 1s ease-out forwards; }
       .d1 { animation-delay: .2s } .d2 { animation-delay: .5s } .d3 { animation-delay: .8s }
       @keyframes in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+      .pulse { animation: pulse 4s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: .55 } 50% { opacity: 1 } }
+      .const { animation: const 6s ease-in-out infinite; }
+      @keyframes const { 0%,100% { opacity: .6 } 50% { opacity: 1 } }
+      .fairy { animation: fairy 16s ease-in-out infinite; }
+      @keyframes fairy {
+        0%,100% { transform: translate(0,0) } 15% { transform: translate(40px,-14px) }
+        30% { transform: translate(90px,6px) } 45% { transform: translate(140px,-10px) }
+        60% { transform: translate(100px,-26px) } 75% { transform: translate(50px,-4px) } 90% { transform: translate(14px,-18px) } }
+      .wing { transform-box: fill-box; transform-origin: center; animation: flap .25s ease-in-out infinite alternate; }
+      @keyframes flap { to { transform: scaleY(.35) } }
       .cursor { animation: blink 1.1s steps(1) infinite; }
       @keyframes blink { 50% { opacity: 0 } }
     </style>
@@ -82,8 +97,41 @@
       </g>
     </g>
 
+    <!-- easter egg: sword resting in a stone pedestal -->
+    <g transform="translate(268 0)">
+      <ellipse cx="0" cy="206" rx="26" ry="22" fill="url(#swordGlow)" class="pulse"/>
+      <path d="M-16 230 L-11 219 L11 219 L16 230Z" fill="#3a4672"/><path d="M-16 230 L16 230 L14 233 L-14 233Z" fill="#26304f"/>
+      <path d="M-11 219 L11 219 L9 216 L-9 216Z" fill="#56649a"/>
+      <rect x="-1.4" y="196" width="2.8" height="21" fill="#c9d8f5"/>
+      <path d="M-1.4 217 L0 220 L1.4 217Z" fill="#c9d8f5"/>
+      <rect x="-7" y="194" width="14" height="2.6" rx="1.2" fill="#5b7bd5"/>
+      <rect x="-1.2" y="187" width="2.4" height="7" fill="#4a5f9e"/>
+      <circle cx="0" cy="186" r="2" fill="#f5d76e"/>
+    </g>
+
+    <!-- easter egg: three-triangle constellation -->
+    <g class="const">
+      <g stroke="#f5d76e" stroke-width=".7" opacity=".35" fill="none">
+        <path d="M845 30 L825 66 L865 66Z"/>
+        <path d="M835 48 L855 48 L845 66Z"/>
+      </g>
+      <g fill="#fbe9a6">
+        <circle cx="845" cy="30" r="1.7"/><circle cx="825" cy="66" r="1.7"/><circle cx="865" cy="66" r="1.7"/>
+        <circle cx="835" cy="48" r="1.3"/><circle cx="855" cy="48" r="1.3"/><circle cx="845" cy="66" r="1.3"/>
+      </g>
+    </g>
+
     <!-- fireflies -->
     <g><circle cx="674.6" cy="285.0" r="1.6" class="fly" style="--dx:8px;animation-duration:6.32s;animation-delay:-6.44s"/><circle cx="794.9" cy="236.5" r="1.6" class="fly" style="--dx:-12px;animation-duration:7.73s;animation-delay:-4.31s"/><circle cx="280.1" cy="281.0" r="1.6" class="fly" style="--dx:-8px;animation-duration:7.17s;animation-delay:-1.08s"/><circle cx="671.7" cy="272.3" r="1.6" class="fly" style="--dx:6px;animation-duration:5.12s;animation-delay:-5.65s"/><circle cx="827.7" cy="252.5" r="1.6" class="fly" style="--dx:6px;animation-duration:4.59s;animation-delay:-1.15s"/><circle cx="216.9" cy="248.2" r="1.6" class="fly" style="--dx:-11px;animation-duration:4.99s;animation-delay:-2.43s"/><circle cx="392.7" cy="254.2" r="1.6" class="fly" style="--dx:15px;animation-duration:5.06s;animation-delay:-5.69s"/><circle cx="464.1" cy="265.9" r="1.6" class="fly" style="--dx:11px;animation-duration:7.21s;animation-delay:-6.44s"/><circle cx="538.0" cy="288.3" r="1.6" class="fly" style="--dx:12px;animation-duration:4.95s;animation-delay:-7.65s"/><circle cx="423.8" cy="266.0" r="1.6" class="fly" style="--dx:-11px;animation-duration:4.25s;animation-delay:-3.25s"/><circle cx="680.4" cy="284.2" r="1.6" class="fly" style="--dx:-7px;animation-duration:5.55s;animation-delay:-1.04s"/><circle cx="341.9" cy="270.3" r="1.6" class="fly" style="--dx:16px;animation-duration:4.24s;animation-delay:-0.91s"/><circle cx="483.5" cy="241.4" r="1.6" class="fly" style="--dx:-15px;animation-duration:5.84s;animation-delay:-0.93s"/><circle cx="539.6" cy="246.4" r="1.6" class="fly" style="--dx:-14px;animation-duration:6.35s;animation-delay:-5.14s"/></g>
+
+    <!-- easter egg: a little fairy wandering among the fireflies -->
+    <g transform="translate(400 214)">
+      <g class="fairy">
+        <ellipse cx="-3.2" cy="-2.5" rx="3.2" ry="1.8" fill="#e0f2fe" opacity=".7" class="wing"/>
+        <ellipse cx="3.2" cy="-2.5" rx="3.2" ry="1.8" fill="#e0f2fe" opacity=".7" class="wing"/>
+        <circle r="2.6" fill="#bae6fd" style="filter: drop-shadow(0 0 4px #38bdf8) drop-shadow(0 0 8px #38bdf8)"/>
+      </g>
+    </g>
 
     <!-- text -->
     <text x="450" y="70" text-anchor="middle" class="mono fade d1" font-size="12" letter-spacing="4" fill="#8fa3c8">PURA VIDA · WELCOME TO MY GITHUB</text>
