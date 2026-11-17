@@ -42,7 +42,7 @@
 ### `> stats`
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Fabian-1719&show_icons=true&count_private=true&include_all_commits=true&bg_color=0b0f17&title_color=22d3ee&icon_color=22d3ee&text_color=c9d1d9&border_color=30363d" alt="GitHub stats"/>
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Fabian-1719&theme=github_dark" alt="GitHub stats"/>
   <img height="165" src="https://streak-stats.demolab.com?user=Fabian-1719&background=0b0f17&border=30363d&ring=22d3ee&fire=22d3ee&currStreakLabel=22d3ee&sideLabels=c9d1d9&currStreakNum=e6edf3&sideNums=e6edf3&dates=8b949e" alt="GitHub streak"/>
 </p>
 
