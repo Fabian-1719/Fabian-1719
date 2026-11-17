@@ -1,59 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" role="img" aria-label="Fabian Aragón Arce — Computer Engineering Student">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Fabian Aragón Arce — Computer Engineering Student">
   <defs>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M24 0H0V24" fill="none" stroke="#1b2333" stroke-width="1"/>
-    </pattern>
-    <radialGradient id="glow" cx="78%" cy="45%" r="45%">
-      <stop offset="0" stop-color="#22d3ee" stop-opacity=".22"/>
-      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="line" x1="0" x2="1">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070a14"/>
+      <stop offset=".55" stop-color="#0e1530"/>
+      <stop offset="1" stop-color="#1c2a4a"/>
     </linearGradient>
+    <radialGradient id="moonGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(120 64) scale(90)">
+      <stop offset="0" stop-color="#f4e9c8" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#f4e9c8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lava" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(722 162) scale(70 40)">
+      <stop offset="0" stop-color="#ff7a3d" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#ff7a3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shoot" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="900" height="300" rx="14"/></clipPath>
     <style>
       .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
       .sans { font-family: 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif; }
-      .fade { opacity: 0; animation: in .8s ease-out forwards; }
-      .d1 { animation-delay: .1s } .d2 { animation-delay: .35s } .d3 { animation-delay: .6s } .d4 { animation-delay: .85s }
+      .tw { fill: #e8eefc; animation: tw ease-in-out infinite; }
+      @keyframes tw { 0%,100% { opacity: .25 } 50% { opacity: 1 } }
+      .fly { fill: #d9f99d; filter: drop-shadow(0 0 3px #bef264); animation: fly ease-in-out infinite; }
+      @keyframes fly { 0%,100% { opacity: 0; transform: translate(0,0) } 30%,70% { opacity: .95 } 50% { transform: translate(var(--dx), -10px) } }
+      .smoke { fill: #9aa6c2; opacity: 0; animation: smoke 9s ease-out infinite; }
+      @keyframes smoke { 0% { opacity: 0; transform: translate(0,0) scale(.6) } 15% { opacity: .35 } 100% { opacity: 0; transform: translate(70px,-70px) scale(2.2) } }
+      .shoot { opacity: 0; animation: shoot 7s ease-in infinite; animation-delay: 2s; }
+      @keyframes shoot { 0% { opacity: 0; transform: translate(0,0) } 3% { opacity: 1 } 12% { opacity: 0; transform: translate(-220px,110px) } 100% { opacity: 0; transform: translate(-220px,110px) } }
+      .fade { opacity: 0; animation: in 1s ease-out forwards; }
+      .d1 { animation-delay: .2s } .d2 { animation-delay: .5s } .d3 { animation-delay: .8s }
       @keyframes in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
       .cursor { animation: blink 1.1s steps(1) infinite; }
       @keyframes blink { 50% { opacity: 0 } }
-      .bit { animation: flicker 3s ease-in-out infinite; }
-      @keyframes flicker { 0%,100% { opacity: .15 } 50% { opacity: .55 } }
-      .star { transform-origin: 735px 125px; animation: spin 14s linear infinite, pulse 3s ease-in-out infinite; }
-      @keyframes spin { to { transform: rotate(360deg) } }
-      @keyframes pulse { 0%,100% { opacity: .85 } 50% { opacity: 1 } }
     </style>
   </defs>
 
-  <rect width="900" height="260" rx="14" fill="#0b0f17"/>
-  <rect width="900" height="260" rx="14" fill="url(#grid)"/>
-  <rect width="900" height="260" rx="14" fill="url(#glow)"/>
+  <g clip-path="url(#frame)">
+    <rect width="900" height="300" fill="url(#sky)"/>
 
-  <!-- binary column -->
-  <g class="mono" font-size="12" fill="#22d3ee">
-    <text x="28" y="56"  class="bit">0</text>
-    <text x="28" y="76"  class="bit" style="animation-delay:.4s">1</text>
-    <text x="28" y="96"  class="bit" style="animation-delay:.8s">1</text>
-    <text x="28" y="116" class="bit" style="animation-delay:1.2s">0</text>
-    <text x="28" y="136" class="bit" style="animation-delay:1.6s">1</text>
-    <text x="28" y="156" class="bit" style="animation-delay:2s">0</text>
-    <text x="28" y="176" class="bit" style="animation-delay:2.4s">1</text>
-    <text x="28" y="196" class="bit" style="animation-delay:2.8s">1</text>
-  </g>
+    <!-- stars -->
+    <g><circle cx="456.4" cy="146.9" r="1.2" class="tw" style="animation-duration:3.2s;animation-delay:-3.14s"/><circle cx="807.3" cy="94.1" r="0.6" class="tw" style="animation-duration:4.78s;animation-delay:-0.5s"/><circle cx="546.3" cy="116.3" r="0.8" class="tw" style="animation-duration:2.49s;animation-delay:-0.56s"/><circle cx="44.0" cy="89.8" r="1.0" class="tw" style="animation-duration:3.01s;animation-delay:-2.77s"/><circle cx="469.3" cy="17.2" r="1.2" class="tw" style="animation-duration:3.17s;animation-delay:-1.03s"/><circle cx="68.0" cy="111.1" r="0.6" class="tw" style="animation-duration:4.66s;animation-delay:-0.15s"/><circle cx="880.2" cy="31.8" r="0.8" class="tw" style="animation-duration:3.38s;animation-delay:-3.43s"/><circle cx="16.4" cy="66.1" r="1.2" class="tw" style="animation-duration:3.99s;animation-delay:-2.95s"/><circle cx="332.2" cy="22.8" r="0.8" class="tw" style="animation-duration:3.27s;animation-delay:-4.68s"/><circle cx="238.5" cy="156.5" r="1.0" class="tw" style="animation-duration:4.16s;animation-delay:-0.85s"/><circle cx="195.6" cy="120.0" r="1.2" class="tw" style="animation-duration:4.57s;animation-delay:-4.22s"/><circle cx="799.4" cy="101.3" r="0.6" class="tw" style="animation-duration:3.22s;animation-delay:-2.81s"/><circle cx="699.1" cy="162.8" r="1.5" class="tw" style="animation-duration:3.01s;animation-delay:-1.11s"/><circle cx="770.2" cy="143.5" r="1.5" class="tw" style="animation-duration:3.58s;animation-delay:-4.35s"/><circle cx="221.0" cy="133.2" r="0.8" class="tw" style="animation-duration:3.12s;animation-delay:-1.95s"/><circle cx="504.6" cy="48.5" r="0.8" class="tw" style="animation-duration:3.64s;animation-delay:-4.6s"/><circle cx="323.2" cy="170.2" r="1.0" class="tw" style="animation-duration:4.65s;animation-delay:-0.39s"/><circle cx="852.3" cy="138.3" r="1.2" class="tw" style="animation-duration:4.44s;animation-delay:-1.36s"/><circle cx="204.1" cy="100.2" r="1.5" class="tw" style="animation-duration:2.33s;animation-delay:-1.57s"/><circle cx="477.9" cy="28.6" r="0.8" class="tw" style="animation-duration:2.72s;animation-delay:-3.67s"/><circle cx="470.9" cy="146.3" r="0.8" class="tw" style="animation-duration:2.34s;animation-delay:-0.99s"/><circle cx="439.3" cy="35.8" r="0.6" class="tw" style="animation-duration:3.23s;animation-delay:-3.44s"/><circle cx="221.6" cy="107.3" r="0.8" class="tw" style="animation-duration:3.85s;animation-delay:-4.4s"/><circle cx="743.0" cy="71.9" r="1.2" class="tw" style="animation-duration:4.39s;animation-delay:-4.03s"/><circle cx="579.6" cy="17.6" r="0.8" class="tw" style="animation-duration:2.33s;animation-delay:-4.67s"/><circle cx="385.5" cy="37.5" r="1.5" class="tw" style="animation-duration:3.32s;animation-delay:-4.61s"/><circle cx="825.8" cy="145.0" r="1.2" class="tw" style="animation-duration:2.62s;animation-delay:-3.76s"/><circle cx="763.1" cy="76.3" r="1.5" class="tw" style="animation-duration:2.48s;animation-delay:-3.94s"/><circle cx="183.6" cy="112.3" r="1.0" class="tw" style="animation-duration:2.32s;animation-delay:-0.49s"/><circle cx="663.1" cy="67.0" r="1.5" class="tw" style="animation-duration:4.9s;animation-delay:-2.95s"/><circle cx="739.6" cy="101.5" r="0.6" class="tw" style="animation-duration:4.31s;animation-delay:-1.84s"/><circle cx="598.8" cy="97.0" r="0.8" class="tw" style="animation-duration:3.37s;animation-delay:-4.19s"/><circle cx="487.3" cy="98.7" r="1.0" class="tw" style="animation-duration:3.61s;animation-delay:-2.82s"/><circle cx="683.1" cy="23.9" r="0.8" class="tw" style="animation-duration:3.01s;animation-delay:-3.86s"/><circle cx="415.5" cy="149.0" r="1.0" class="tw" style="animation-duration:2.31s;animation-delay:-2.34s"/><circle cx="163.9" cy="65.8" r="0.8" class="tw" style="animation-duration:4.77s;animation-delay:-0.41s"/><circle cx="853.5" cy="79.2" r="0.8" class="tw" style="animation-duration:3.12s;animation-delay:-1.45s"/><circle cx="581.0" cy="23.2" r="1.0" class="tw" style="animation-duration:3.13s;animation-delay:-2.43s"/><circle cx="223.9" cy="16.8" r="0.8" class="tw" style="animation-duration:2.71s;animation-delay:-1.23s"/><circle cx="68.1" cy="87.9" r="1.2" class="tw" style="animation-duration:4.21s;animation-delay:-1.14s"/><circle cx="20.2" cy="63.4" r="1.2" class="tw" style="animation-duration:3.12s;animation-delay:-2.12s"/><circle cx="275.9" cy="18.3" r="0.8" class="tw" style="animation-duration:2.83s;animation-delay:-1.7s"/><circle cx="458.2" cy="124.4" r="0.8" class="tw" style="animation-duration:4.43s;animation-delay:-3.61s"/><circle cx="241.3" cy="130.3" r="0.6" class="tw" style="animation-duration:2.49s;animation-delay:-2.09s"/><circle cx="467.5" cy="31.7" r="0.6" class="tw" style="animation-duration:2.91s;animation-delay:-0.06s"/><circle cx="39.6" cy="167.3" r="0.8" class="tw" style="animation-duration:2.25s;animation-delay:-4.34s"/><circle cx="290.3" cy="49.1" r="1.2" class="tw" style="animation-duration:2.55s;animation-delay:-3.29s"/><circle cx="321.8" cy="87.1" r="1.2" class="tw" style="animation-duration:3.96s;animation-delay:-2.4s"/><circle cx="883.8" cy="101.7" r="1.2" class="tw" style="animation-duration:4.69s;animation-delay:-4.46s"/><circle cx="62.5" cy="47.9" r="0.8" class="tw" style="animation-duration:3.54s;animation-delay:-0.06s"/><circle cx="617.5" cy="50.7" r="1.2" class="tw" style="animation-duration:2.63s;animation-delay:-3.42s"/><circle cx="16.2" cy="53.3" r="0.8" class="tw" style="animation-duration:2.85s;animation-delay:-3.79s"/><circle cx="381.5" cy="30.8" r="1.5" class="tw" style="animation-duration:3.01s;animation-delay:-2.51s"/><circle cx="680.1" cy="113.2" r="1.5" class="tw" style="animation-duration:2.23s;animation-delay:-1.72s"/><circle cx="504.0" cy="67.9" r="1.2" class="tw" style="animation-duration:2.31s;animation-delay:-3.04s"/><circle cx="277.2" cy="141.8" r="1.0" class="tw" style="animation-duration:4.72s;animation-delay:-1.0s"/></g>
 
-  <text x="64" y="74" class="mono fade d1" font-size="13" letter-spacing="3" fill="#22d3ee">COMPUTER ENGINEERING STUDENT</text>
-  <text x="62" y="126" class="sans fade d2" font-size="44" font-weight="700" fill="#e6edf3">Fabian Aragón Arce</text>
-  <rect x="64" y="142" width="300" height="2" fill="url(#line)" class="fade d2"/>
-  <text x="64" y="180" class="mono fade d3" font-size="14" fill="#8b949e">
-    <tspan fill="#22d3ee">$</tspan> whoami <tspan fill="#c9d1d9">→ builder · learner · security-curious</tspan><tspan class="cursor" fill="#22d3ee"> ▍</tspan>
-  </text>
-  <text x="64" y="212" class="mono fade d4" font-size="12" fill="#6e7681">TEC · Costa Rica  //  Python · Java · Go · React · Azure</text>
+    <!-- moon -->
+    <mask id="crescent"><rect width="900" height="300" fill="#fff"/><circle cx="129" cy="57" r="18" fill="#000"/></mask>
+    <circle cx="120" cy="64" r="90" fill="url(#moonGlow)"/>
+    <circle cx="120" cy="64" r="20" fill="#f4e9c8" mask="url(#crescent)"/>
 
-  <!-- four-point star -->
-  <g class="star">
-    <path d="M735 55 C740 110 750 120 805 125 C750 130 740 140 735 195 C730 140 720 130 665 125 C720 120 730 110 735 55Z" fill="#22d3ee"/>
-    <path d="M735 85 C738 118 742 122 775 125 C742 128 738 132 735 165 C732 132 728 128 695 125 C728 122 732 118 735 85Z" fill="#a5f3fc"/>
+    <!-- shooting star -->
+    <g class="shoot"><line x1="700" y1="30" x2="760" y2="0" stroke="url(#shoot)" stroke-width="1.6" stroke-linecap="round" transform="rotate(0)"/></g>
+
+    <!-- far mountain range -->
+    <path d="M0 205 L60 180 L120 192 L190 160 L250 178 L320 150 L400 176 L470 158 L540 182 L600 168 L680 186 L760 160 L830 176 L900 165 L900 300 L0 300Z" fill="#1a2444"/>
+
+    <!-- volcano glow + smoke -->
+    <ellipse cx="722" cy="162" rx="70" ry="40" fill="url(#lava)"/>
+    <g transform="translate(716 146)">
+      <circle class="smoke" r="9"/>
+      <circle class="smoke" r="8" style="animation-delay:3s"/>
+      <circle class="smoke" r="10" style="animation-delay:6s"/>
+    </g>
+
+    <!-- volcano (Arenal-style cone) -->
+    <path d="M570 240 Q670 195 706 152 L716 147 L728 152 Q760 195 870 240Z" fill="#121a33"/>
+    <path d="M706 152 L716 147 L728 152 L722 156 L711 156Z" fill="#ff8a4c" opacity=".8"/>
+
+    <!-- mid hills -->
+    <path d="M0 238 Q90 205 180 226 T360 222 T560 236 T760 220 T900 230 L900 300 L0 300Z" fill="#0f162b"/>
+
+    <!-- jungle front: palms + canopy silhouettes -->
+    <g fill="#070b17">
+      <path d="M0 262 Q40 248 80 258 Q120 244 170 256 Q220 246 260 260 Q310 250 360 262 Q420 252 470 264 Q530 252 590 262 Q650 250 710 260 Q770 248 830 258 Q870 252 900 256 L900 300 L0 300Z"/>
+      <!-- palm 1 -->
+      <path d="M118 262 Q122 225 132 196" stroke="#070b17" stroke-width="4" fill="none"/>
+      <path d="M132 196 Q110 186 92 196 Q112 190 132 198 Q118 176 104 172 Q124 178 134 196 Q140 176 156 170 Q144 182 136 197 Q158 186 174 194 Q154 192 134 199Z"/>
+      <!-- palm 2 -->
+      <g transform="translate(-330 4)">
+      <path d="M812 260 Q806 228 796 204" stroke="#070b17" stroke-width="4" fill="none"/>
+      <path d="M796 204 Q776 194 760 204 Q778 198 796 206 Q784 186 772 182 Q790 188 798 204 Q806 186 820 180 Q810 192 800 205 Q820 196 836 202 Q818 200 798 207Z"/>
+      </g>
+    </g>
+
+    <!-- fireflies -->
+    <g><circle cx="674.6" cy="285.0" r="1.6" class="fly" style="--dx:8px;animation-duration:6.32s;animation-delay:-6.44s"/><circle cx="794.9" cy="236.5" r="1.6" class="fly" style="--dx:-12px;animation-duration:7.73s;animation-delay:-4.31s"/><circle cx="280.1" cy="281.0" r="1.6" class="fly" style="--dx:-8px;animation-duration:7.17s;animation-delay:-1.08s"/><circle cx="671.7" cy="272.3" r="1.6" class="fly" style="--dx:6px;animation-duration:5.12s;animation-delay:-5.65s"/><circle cx="827.7" cy="252.5" r="1.6" class="fly" style="--dx:6px;animation-duration:4.59s;animation-delay:-1.15s"/><circle cx="216.9" cy="248.2" r="1.6" class="fly" style="--dx:-11px;animation-duration:4.99s;animation-delay:-2.43s"/><circle cx="392.7" cy="254.2" r="1.6" class="fly" style="--dx:15px;animation-duration:5.06s;animation-delay:-5.69s"/><circle cx="464.1" cy="265.9" r="1.6" class="fly" style="--dx:11px;animation-duration:7.21s;animation-delay:-6.44s"/><circle cx="538.0" cy="288.3" r="1.6" class="fly" style="--dx:12px;animation-duration:4.95s;animation-delay:-7.65s"/><circle cx="423.8" cy="266.0" r="1.6" class="fly" style="--dx:-11px;animation-duration:4.25s;animation-delay:-3.25s"/><circle cx="680.4" cy="284.2" r="1.6" class="fly" style="--dx:-7px;animation-duration:5.55s;animation-delay:-1.04s"/><circle cx="341.9" cy="270.3" r="1.6" class="fly" style="--dx:16px;animation-duration:4.24s;animation-delay:-0.91s"/><circle cx="483.5" cy="241.4" r="1.6" class="fly" style="--dx:-15px;animation-duration:5.84s;animation-delay:-0.93s"/><circle cx="539.6" cy="246.4" r="1.6" class="fly" style="--dx:-14px;animation-duration:6.35s;animation-delay:-5.14s"/></g>
+
+    <!-- text -->
+    <text x="450" y="70" text-anchor="middle" class="mono fade d1" font-size="12" letter-spacing="4" fill="#8fa3c8">PURA VIDA · WELCOME TO MY GITHUB</text>
+    <text x="450" y="118" text-anchor="middle" class="sans fade d2" font-size="42" font-weight="700" fill="#f1f5ff">Fabian Aragón Arce</text>
+    <text x="450" y="150" text-anchor="middle" class="mono fade d3" font-size="14" fill="#9fb0d0">&lt;computer engineering student /&gt;<tspan class="cursor" fill="#d9f99d"> _</tspan></text>
   </g>
 </svg>
