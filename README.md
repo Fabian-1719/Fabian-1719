@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="assets/banner.svg?v=3" alt="Fabian Aragón Arce — Computer Engineering Student" width="100%"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Fabian-1719/Fabian-1719/raw/main/assets/banner.svg?v=3"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/Fabian-1719/Fabian-1719/raw/main/assets/banner-day.svg?v=1"/>
+    <img src="https://github.com/Fabian-1719/Fabian-1719/raw/main/assets/banner.svg?v=3" alt="Fabian Aragón Arce — Computer Engineering Student" width="100%"/>
+  </picture>
 </p>
 
 <p align="center">
@@ -49,6 +53,14 @@
 
 <p align="center">
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Fabian-1719&bg_color=0b0f17&color=c9d1d9&line=22d3ee&point=e6edf3&area=true&area_color=22d3ee&hide_border=false&border_color=30363d&title_color=22d3ee&custom_title=Contribution%20Graph" alt="Contribution graph"/>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Fabian-1719/Fabian-1719/output/snake-night.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Fabian-1719/Fabian-1719/output/snake-day.svg"/>
+    <img src="https://raw.githubusercontent.com/Fabian-1719/Fabian-1719/output/snake-night.svg" alt="Snake eating my contribution graph" width="100%"/>
+  </picture>
 </p>
 
 <p align="center"><sub><code>while (alive) { learn(); build(); secure(); }</code></sub></p>
