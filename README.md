@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Fabian Aragón Arce — Computer Engineering Student" width="100%"/>
+  <img src="assets/banner.svg?v=3" alt="Fabian Aragón Arce — Computer Engineering Student" width="100%"/>
 </p>
 
 <p align="center">
