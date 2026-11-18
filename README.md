@@ -12,6 +12,7 @@
 </p>
 
 <p align="center">
+  <a href="https://fabian-1719.github.io"><img src="https://img.shields.io/badge/Portfolio-ff6b2c?style=for-the-badge&logo=googlechrome&logoColor=1d0c03&labelColor=ff6b2c&color=ff6b2c" alt="Portfolio"/></a>
   <a href="https://www.linkedin.com/in/fabian-arce-570038402"><img src="https://img.shields.io/badge/LinkedIn-0b0f17?style=for-the-badge&logo=linkedin&logoColor=22d3ee" alt="LinkedIn"/></a>
   <a href="mailto:fabsarceargon@gmail.com"><img src="https://img.shields.io/badge/Email-0b0f17?style=for-the-badge&logo=gmail&logoColor=22d3ee" alt="Email"/></a>
   <a href="https://github.com/Fabian-1719?tab=repositories"><img src="https://img.shields.io/badge/Repos-0b0f17?style=for-the-badge&logo=github&logoColor=22d3ee" alt="Repositories"/></a>
