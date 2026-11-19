@@ -25,7 +25,7 @@
 
 ### `> about`
 
-I'm a Computer Engineering student at the **Instituto Tecnológico de Costa Rica** who likes understanding systems end to end — from registers and memory in **x86 assembly** all the way up to **microservices in the cloud**. Most of what I build starts as a course project and turns into something I keep improving on my own.
+I'm a Computer Engineering student at the **Instituto Tecnológico de Costa Rica** who likes understanding systems end to end — from the interface all the way to **microservices in the cloud**. Most of what I build starts as a course project and turns into something I keep improving on my own.
 
 Lately I've been focused on **distributed systems**: a peer code-review platform made of three microservices on Azure, a game platform where a TypeScript server plays against you with a **Prolog AI** and streams every move to **Go and Scala** analytics services, and a price scraper that runs **80 concurrent workers** across processes, threads and async I/O.
 
@@ -36,7 +36,7 @@ const fabian = {
   buildsWith: ["Python", "Java", "TypeScript", "Go", "React", "Spring Boot"],
   enjoys:    ["distributed systems", "low-level programming", "game dev"],
   learning:  ["cybersecurity", "software architecture", "system design"],
-  funFact:   "I've written games in Python, Java, TypeScript… and x86 Assembly 🎮",
+  funFact:   "I've written games in Python, Java and TypeScript 🎮",
 };
 ```
 
